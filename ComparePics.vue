@@ -62,12 +62,12 @@ export default {
         v-resize="setImgWidth"
     >
         <!-- Pic-B -->
-        <img :src="srcB" :alt="altB" @load="setImgWidth" />
+        <img :src="srcB" :alt="altB || labelB" @load="setImgWidth" />
         <div v-if="labelB" class="label" style="right: 1.5rem;">{{ labelB }}</div>
 
         <!-- Pic-A -->
         <div class="reveal" :style="{ width: pos }">
-            <img :src="srcA" :alt="altA" :style="{ width: width }" />
+            <img :src="srcA" :alt="altA || labelA" :style="{ width: width }" />
             <div v-if="labelA" class="label" style="left: 1.5rem;">{{ labelA }}</div>
         </div>
 
